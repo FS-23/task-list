@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks app</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="main">
+        <div class="app-content" id="app-content" >
+             <nav class="nav nav-bar">
+                 Tasko
+             </nav>
+             <div class="tasks-container" id="tasks-container">
+               
+             </div>
+             <button class="btn btn-warning btn-icon btn-circle position-fixed-bottom-right" id="add-task-btn">
+                <ion-icon name="add-outline" style="font-size: 1.2rem;"></ion-icon>
+            </button>
+        </div>
+        <div class="connexion-container" id="connexion-container">
+                 <div class="login-container shadow-lg">
+                      <div class="form-group">
+                          <strong>Email</strong>
+                          <input type="text" class="form-control" id="email">
+                      </div>
+                      <div class="form-group">
+                        <strong>Mot de passe</strong>
+                        <input type="password" class="form-control" id="password">
+                      </div>
+                      <div class="form-group" style="display: flex; align-items: center;">
+                        <input type="checkbox" style="width:20px; height:20px" id="user-active"> Rester connecter
+                      </div>
+                      <div class="form-group">
+                         <button class="btn btn-outline-primary" style="width: 100%;" onclick="login()"> Connexion</button>
+                      </div>
+                 </div>
+        </div>
+
+        <div class="modal modal-sm" id="app-modal" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content" >
+                    <div class="modal-header">
+                        <div class="modal-title">Title</div>
+                        <span class="close" style="float: right; font-size: 1.5rem;">&times</span>
+                    </div>
+                    <div class="modal-body" id="app-modal-body">
+                       
+                    </div>
+                    <div class="modal-footer">
+                        <button class="close btn btn-danger">Close</button>
+                        <button class="btn btn-primary" id="save-task-btn">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="alert alert-sm" id="app-alert"  style="display: none;">
+                    <div class="alert-dialog">
+                        <div class="alert-content">
+                            <div class="alert-body">Body</div>
+                            <div class="alert-footer">
+                                <button class="close btn">OK</button>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/6.0.1/ionicons.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,326 @@
+:root{
+  margin: 0;
+  --app-bg-color: rgb(195, 195, 220);
+  --sm-size: 1rem;
+  --md-size: 0.8rem;
+  --default-color:  rgb(213, 207, 207);
+  --primary-color: rgb(116, 116, 250);
+  --danger-color: rgb(246, 50, 33);
+  --warning-color: rgb(249, 249, 40);
+  --success-color: rgb(38, 237, 104);
+}
+
+body{
+    margin: 0;;
+    padding: 0;
+    min-height: 100vh;
+    background-color: var(--app-bg-color)
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.shadow-lg{
+    box-shadow: 0 0 8px 0 rgb(0 0 0 /30%);
+}
+
+.app-content {
+  
+}
+
+.nav{
+    padding: 1rem;
+    background-color: rgb(102, 99, 99);
+}
+
+.tasks-container {
+    margin: 5px 25px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.task-container {
+    width:25%;
+    height: 150px;
+    padding: 0.5rem;
+}
+
+.task-container .task-item{
+    background-color: #fff;
+    height: 100%;
+    padding: 0.8rem;
+    position: relative;
+}
+
+
+.task-item .task-footer {
+    position: absolute;
+    bottom: 0;
+    right: 0.8rem;
+}
+
+.task-timewindow {
+    font-size: 0.7rem;
+    color: rgb(195, 191, 191);
+}
+
+.task-status {
+    padding: 0.3rem;
+    font-size: 0.7rem;
+    background-color: yellow;
+    margin-left: 0.8rem;
+}
+
+.connexion-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--app-bg-color)
+}
+
+.login-container {
+    width: 400px;
+    height: auto;
+    padding: 1.5rem;
+    background-color: rgb(0 0 0 /10%);
+    border-radius: 0.3rem;
+}
+
+.form-group {
+    margin: 1rem 0;
+}
+
+.form-control {
+    outline: none;
+    width: 100%;
+    height: 40px;
+    background-color: rgb(232, 235, 237);
+    padding: 8px var(--sm-size);
+    border: none
+}
+
+.form-control:focus {
+    background-color: rgb(215, 225, 233);
+}
+
+.btn {
+    outline: none;
+    border: none;
+    padding: 0.8rem;
+    cursor: pointer;
+}
+
+.btn.btn-outline-primary{
+    border: 1px solid rgb(123, 123, 246);
+    transition: background-color 1s
+}
+
+.btn.btn-outline-primary:hover{
+    background-color: blue;
+}
+
+.btn.btn-success{
+    background-color: var(--success-color);
+}
+.btn.btn-primary{
+    background-color: var(--primary-color);
+}
+
+.btn.btn-warning{
+    background-color: var(--warning-color);
+}
+
+.btn.btn-danger{
+    background-color: var(--danger-color);
+}
+
+.btn.btn-info{
+    background-color: var(--info-color);
+}
+
+.btn.btn-secondary{
+    background-color: var(--secondary-color);
+}
+
+.text-success{
+    color: var(--success-color)
+}
+
+.text-primary{
+    color: var(--primary-color)
+}
+
+.text-danger{
+    color: var(--danger-color)
+}
+
+.text-info{
+    color: var(--info-color)
+}
+
+.text-warning{
+    color: var(--warning-color)
+}
+
+.text-secondary{
+    color: var(--secondary-color)
+}
+
+
+.d-none{
+    display: none !important;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.btn-icon.btn-circle{
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.position-fixed-bottom-right{
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+
+.task-body{
+    margin-top: 0.8rem
+}
+
+
+.modal  {
+     width: 100%;
+     height: 100vh;
+     position: fixed;
+     z-index: 3;
+     top:0;
+     background-color: rgba(24, 24, 24, 0.5);
+}
+
+.modal .modal-dialog{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .modal-content {
+    position: relative;
+    top:0;
+    width: 500px;
+    background-color: #fff;
+    animation: topToBottom 1.2s ease-in-out;
+}
+
+.modal-content > * {
+    padding: 0.8rem;
+}
+
+.modal-content .modal-header {
+     border-bottom: 1px solid rgb(213, 207, 207);
+}
+
+.modal-header {
+    position: relative;
+}
+
+.modal-header .close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.modal .modal-footer{
+    border-top: 1px solid var(--default-color);
+    text-align: right;
+}
+
+.modal.hide-footer .modal-footer{
+   display: none
+}
+
+.alert  {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 3;
+    top:0;
+    background-color: rgba(24, 24, 24, 0.5);
+}
+
+.alert .alert-content > *{
+    padding: var(--md-size);
+}
+
+.alert .alert-dialog{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert .alert-content {
+    position: relative;
+    top:0;
+    width: 350px;
+    background-color: #fff;
+    animation: zoomOut .3s ease-in-out;
+    border-radius: 0.3rem;
+}
+
+.alert-content .alert-body{
+    text-align: center;
+    padding: 2rem;
+}
+
+.alert-content .alert-footer{
+    text-align: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.row > .col {
+    width: 45%
+}
+
+@keyframes topToBottom {
+    from {
+        top: -200px;
+    }
+
+    to{
+        top:0
+    }
+}
+
+@keyframes zoomOut {
+    from {
+        transform: scale(0.8);
+    }
+
+    to{
+        transform: scale(1);
+    }
+}
